@@ -1,4 +1,3 @@
-import re
 import json
 from PyPDF2 import PdfReader
 from docx import Document
@@ -8,7 +7,8 @@ def extract_text_from_pdf(file_path: str) -> str:
     reader = PdfReader(file_path)
     text = ""
     for page in reader.pages:
-        text += page.extract_text() + "\n"
+        page_text = page.extract_text() or ""
+        text += page_text + "\n"
     return text
 
 def extract_text_from_docx(file_path: str) -> str:
@@ -16,41 +16,38 @@ def extract_text_from_docx(file_path: str) -> str:
     return "\n".join([p.text for p in doc.paragraphs])
 
 def parse_cv(file_path: str) -> dict:
-    """Parses CV and extracts name, phone, email, education (college & location)."""
     if file_path.endswith(".pdf"):
         text = extract_text_from_pdf(file_path)
     elif file_path.endswith(".docx"):
         text = extract_text_from_docx(file_path)
     else:
         return {"status": "error", "msg": "Unsupported file format"}
-
-    
-    email = re.findall(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}", text)
-    phone = re.findall(r"\+?\d[\d\s-]{8,15}", text)
-
-    
-    college_match = re.search(r"(SRM.*|IIT.*|NIT.*|University.*|College.*)", text, re.I)
-
-    
-    location_match = re.search(r"(Chennai|Bangalore|Hyderabad|Delhi|Mumbai|India)", text, re.I)
-
-    result = {
-        "name": text.split("\n")[0].strip(),  
-        "email": email[0] if email else None,
-        "phone": phone[0] if phone else None,
-        "education": {
-            "college": college_match.group(1).strip() if college_match else None,
-            "location": location_match.group(1) if location_match else None
-        },
-        "raw_text_preview": text[:500]  
-    }
-
-    return {"status": "success", "cv_data": result}
+    return {"raw_text": text}
 
 root_agent = Agent(
     name="cv_parser_agent",
     model="gemini-2.0-flash",
     description="Agent to extract structured data from CVs",
-    instruction="You are a CV parser. Extract name, email, phone, and education details into JSON.",
+    instruction=(
+        "You are a CV parser.\n\n"
+        "Step 1: When you receive {'raw_text': '...'}, first extract the following fields from the resume text into JSON:\n"
+        "{\n"
+        '  \"name\": \"<full name or null>\",\n'
+        '  \"email\": \"<email or null>\",\n'
+        '  \"phone\": \"<phone or null>\",\n'
+        '  \"location\": { \"city\": \"<city or null>\", \"country\": \"<country or null>\" },\n'
+        '  \"education\": { \"degree\": \"<degree or null>\", \"university\": \"<university or null>\", \"graduation_year\": <year or null> },\n'
+        '  \"experience\": [ { \"role\": \"<role or null>\", \"company\": \"<company or null>\", \"duration\": \"<duration or null>\" } ]\n'
+        "}\n\n"
+        "Step 2: When the user asks a specific question (like 'What is your phone?', 'Give me location', 'What is your degree?'), "
+        "return ONLY that field’s value.\n"
+        "   - Example:\n"
+        "     User: 'What is your phone?'\n"
+        "     Response: '+91-8838900673'\n\n"
+        "     User: 'What is your location?'\n"
+        "     Response: {\"city\": \"Chennai\", \"country\": \"India\"}\n\n"
+        "Step 3: If the user does NOT ask for a specific field, always return the full JSON.\n\n"
+        "Always return valid JSON or a plain value (string, object, number) only — no extra explanation."
+    ),
     tools=[parse_cv],
 )
