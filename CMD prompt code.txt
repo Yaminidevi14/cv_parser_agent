@@ -1,129 +1,337 @@
 Microsoft Windows [Version 10.0.26100.4946]
 (c) Microsoft Corporation. All rights reserved.
 
-C:\Users\yamin>python -m venv .venv
+C:\Users\yamin>cd C:\Users\yamin\parent_folder
 
-C:\Users\yamin>python -m venv .venv
+C:\Users\yamin\parent_folder>python -m venv .venv
 
-C:\Users\yamin>.venv\Scripts\activate.bat   (on Windows CMD)
+C:\Users\yamin\parent_folder>python -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\users\yamin\appdata\local\programs\python\python313\lib\site-packages (25.2)
 
-(.venv) C:\Users\yamin>pip install google-adk python-docx PyPDF2
-Requirement already satisfied: google-adk in c:\users\yamin\.venv\lib\site-packages (1.14.1)
-Requirement already satisfied: python-docx in c:\users\yamin\.venv\lib\site-packages (1.2.0)
-Requirement already satisfied: PyPDF2 in c:\users\yamin\.venv\lib\site-packages (3.0.1)
-Requirement already satisfied: PyYAML<7.0.0,>=6.0.2 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (6.0.2)
-Requirement already satisfied: absolufy-imports<1.0.0,>=0.3.1 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (0.3.1)
-Requirement already satisfied: anyio<5.0.0,>=4.9.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (4.10.0)
-Requirement already satisfied: authlib<2.0.0,>=1.5.1 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (1.6.4)
-Requirement already satisfied: click<9.0.0,>=8.1.8 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (8.2.1)
-Requirement already satisfied: fastapi<1.0.0,>=0.115.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (0.116.2)
-Requirement already satisfied: google-api-python-client<3.0.0,>=2.157.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (2.182.0)
-Requirement already satisfied: google-cloud-aiplatform<2.0.0,>=1.95.1 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (1.114.0)
-Requirement already satisfied: google-cloud-bigtable>=2.32.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (2.32.0)
-Requirement already satisfied: google-cloud-secret-manager<3.0.0,>=2.22.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (2.24.0)
-Requirement already satisfied: google-cloud-spanner<4.0.0,>=3.56.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (3.57.0)
-Requirement already satisfied: google-cloud-speech<3.0.0,>=2.30.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (2.33.0)
-Requirement already satisfied: google-cloud-storage<3.0.0,>=2.18.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (2.19.0)
-Requirement already satisfied: google-genai<2.0.0,>=1.21.1 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (1.38.0)
-Requirement already satisfied: graphviz<1.0.0,>=0.20.2 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (0.21)
-Requirement already satisfied: mcp<2.0.0,>=1.8.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (1.14.0)
-Requirement already satisfied: opentelemetry-api<2.0.0,>=1.31.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (1.37.0)
-Requirement already satisfied: opentelemetry-exporter-gcp-trace<2.0.0,>=1.9.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (1.9.0)
-Requirement already satisfied: opentelemetry-sdk<2.0.0,>=1.31.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (1.37.0)
-Requirement already satisfied: pydantic<3.0.0,>=2.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (2.11.9)
-Requirement already satisfied: python-dateutil<3.0.0,>=2.9.0.post0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (2.9.0.post0)
-Requirement already satisfied: python-dotenv<2.0.0,>=1.0.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (1.1.1)
-Requirement already satisfied: requests<3.0.0,>=2.32.4 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (2.32.5)
-Requirement already satisfied: sqlalchemy<3.0.0,>=2.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (2.0.43)
-Requirement already satisfied: sqlalchemy-spanner>=1.14.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (1.16.0)
-Requirement already satisfied: starlette<1.0.0,>=0.46.2 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (0.48.0)
-Requirement already satisfied: tenacity<9.0.0,>=8.0.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (8.5.0)
-Requirement already satisfied: typing-extensions<5,>=4.5 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (4.15.0)
-Requirement already satisfied: tzlocal<6.0,>=5.3 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (5.3.1)
-Requirement already satisfied: uvicorn<1.0.0,>=0.34.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (0.35.0)
-Requirement already satisfied: watchdog<7.0.0,>=6.0.0 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (6.0.0)
-Requirement already satisfied: websockets<16.0.0,>=15.0.1 in c:\users\yamin\.venv\lib\site-packages (from google-adk) (15.0.1)
-Requirement already satisfied: idna>=2.8 in c:\users\yamin\.venv\lib\site-packages (from anyio<5.0.0,>=4.9.0->google-adk) (3.10)
-Requirement already satisfied: sniffio>=1.1 in c:\users\yamin\.venv\lib\site-packages (from anyio<5.0.0,>=4.9.0->google-adk) (1.3.1)
-Requirement already satisfied: cryptography in c:\users\yamin\.venv\lib\site-packages (from authlib<2.0.0,>=1.5.1->google-adk) (46.0.1)
-Requirement already satisfied: colorama in c:\users\yamin\.venv\lib\site-packages (from click<9.0.0,>=8.1.8->google-adk) (0.4.6)
-Requirement already satisfied: httplib2<1.0.0,>=0.19.0 in c:\users\yamin\.venv\lib\site-packages (from google-api-python-client<3.0.0,>=2.157.0->google-adk) (0.31.0)
-Requirement already satisfied: google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0 in c:\users\yamin\.venv\lib\site-packages (from google-api-python-client<3.0.0,>=2.157.0->google-adk) (2.40.3)
-Requirement already satisfied: google-auth-httplib2<1.0.0,>=0.2.0 in c:\users\yamin\.venv\lib\site-packages (from google-api-python-client<3.0.0,>=2.157.0->google-adk) (0.2.0)
-Requirement already satisfied: google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5 in c:\users\yamin\.venv\lib\site-packages (from google-api-python-client<3.0.0,>=2.157.0->google-adk) (2.25.1)
-Requirement already satisfied: uritemplate<5,>=3.0.1 in c:\users\yamin\.venv\lib\site-packages (from google-api-python-client<3.0.0,>=2.157.0->google-adk) (4.2.0)
-Requirement already satisfied: googleapis-common-protos<2.0.0,>=1.56.2 in c:\users\yamin\.venv\lib\site-packages (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client<3.0.0,>=2.157.0->google-adk) (1.70.0)
-Requirement already satisfied: protobuf!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.19.5 in c:\users\yamin\.venv\lib\site-packages (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client<3.0.0,>=2.157.0->google-adk) (6.32.1)
-Requirement already satisfied: proto-plus<2.0.0,>=1.22.3 in c:\users\yamin\.venv\lib\site-packages (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client<3.0.0,>=2.157.0->google-adk) (1.26.1)
-Requirement already satisfied: cachetools<6.0,>=2.0.0 in c:\users\yamin\.venv\lib\site-packages (from google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0->google-api-python-client<3.0.0,>=2.157.0->google-adk) (5.5.2)
-Requirement already satisfied: pyasn1-modules>=0.2.1 in c:\users\yamin\.venv\lib\site-packages (from google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0->google-api-python-client<3.0.0,>=2.157.0->google-adk) (0.4.2)
-Requirement already satisfied: rsa<5,>=3.1.4 in c:\users\yamin\.venv\lib\site-packages (from google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0->google-api-python-client<3.0.0,>=2.157.0->google-adk) (4.9.1)
-Requirement already satisfied: packaging>=14.3 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (25.0)
-Requirement already satisfied: google-cloud-bigquery!=3.20.0,<4.0.0,>=1.15.0 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (3.37.0)
-Requirement already satisfied: google-cloud-resource-manager<3.0.0,>=1.3.3 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (1.14.2)
-Requirement already satisfied: shapely<3.0.0 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (2.1.1)
-Requirement already satisfied: docstring_parser<1 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (0.17.0)
-Requirement already satisfied: grpcio<2.0.0,>=1.33.2 in c:\users\yamin\.venv\lib\site-packages (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0,>=1.34.1->google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (1.75.0)
-Requirement already satisfied: grpcio-status<2.0.0,>=1.33.2 in c:\users\yamin\.venv\lib\site-packages (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0,>=1.34.1->google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (1.75.0)
-Requirement already satisfied: cloudpickle<4.0,>=3.0 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (3.1.1)
-Requirement already satisfied: google-cloud-trace<2 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (1.16.2)
-Requirement already satisfied: google-cloud-logging<4 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (3.12.1)
-Requirement already satisfied: google-cloud-core<3.0.0,>=2.4.1 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-bigquery!=3.20.0,<4.0.0,>=1.15.0->google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (2.4.3)
-Requirement already satisfied: google-resumable-media<3.0.0,>=2.0.0 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-bigquery!=3.20.0,<4.0.0,>=1.15.0->google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (2.7.2)
-Requirement already satisfied: google-cloud-appengine-logging<2.0.0,>=0.1.3 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-logging<4->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (1.6.2)
-Requirement already satisfied: google-cloud-audit-log<1.0.0,>=0.3.1 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-logging<4->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (0.3.2)
-Requirement already satisfied: grpc-google-iam-v1<1.0.0,>=0.12.4 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-logging<4->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (0.14.2)
-Requirement already satisfied: sqlparse>=0.4.4 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-spanner<4.0.0,>=3.56.0->google-adk) (0.5.3)
-Requirement already satisfied: grpc-interceptor>=0.15.4 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-spanner<4.0.0,>=3.56.0->google-adk) (0.15.4)
-Requirement already satisfied: google-crc32c<2.0dev,>=1.0 in c:\users\yamin\.venv\lib\site-packages (from google-cloud-storage<3.0.0,>=2.18.0->google-adk) (1.7.1)
-Requirement already satisfied: httpx<1.0.0,>=0.28.1 in c:\users\yamin\.venv\lib\site-packages (from google-genai<2.0.0,>=1.21.1->google-adk) (0.28.1)
-Requirement already satisfied: pyparsing<4,>=3.0.4 in c:\users\yamin\.venv\lib\site-packages (from httplib2<1.0.0,>=0.19.0->google-api-python-client<3.0.0,>=2.157.0->google-adk) (3.2.4)
-Requirement already satisfied: certifi in c:\users\yamin\.venv\lib\site-packages (from httpx<1.0.0,>=0.28.1->google-genai<2.0.0,>=1.21.1->google-adk) (2025.8.3)
-Requirement already satisfied: httpcore==1.* in c:\users\yamin\.venv\lib\site-packages (from httpx<1.0.0,>=0.28.1->google-genai<2.0.0,>=1.21.1->google-adk) (1.0.9)
-Requirement already satisfied: h11>=0.16 in c:\users\yamin\.venv\lib\site-packages (from httpcore==1.*->httpx<1.0.0,>=0.28.1->google-genai<2.0.0,>=1.21.1->google-adk) (0.16.0)
-Requirement already satisfied: httpx-sse>=0.4 in c:\users\yamin\.venv\lib\site-packages (from mcp<2.0.0,>=1.8.0->google-adk) (0.4.1)
-Requirement already satisfied: jsonschema>=4.20.0 in c:\users\yamin\.venv\lib\site-packages (from mcp<2.0.0,>=1.8.0->google-adk) (4.25.1)
-Requirement already satisfied: pydantic-settings>=2.5.2 in c:\users\yamin\.venv\lib\site-packages (from mcp<2.0.0,>=1.8.0->google-adk) (2.10.1)
-Requirement already satisfied: python-multipart>=0.0.9 in c:\users\yamin\.venv\lib\site-packages (from mcp<2.0.0,>=1.8.0->google-adk) (0.0.20)
-Requirement already satisfied: pywin32>=310 in c:\users\yamin\.venv\lib\site-packages (from mcp<2.0.0,>=1.8.0->google-adk) (311)
-Requirement already satisfied: sse-starlette>=1.6.1 in c:\users\yamin\.venv\lib\site-packages (from mcp<2.0.0,>=1.8.0->google-adk) (3.0.2)
-Requirement already satisfied: importlib-metadata<8.8.0,>=6.0 in c:\users\yamin\.venv\lib\site-packages (from opentelemetry-api<2.0.0,>=1.31.0->google-adk) (8.7.0)
-Requirement already satisfied: zipp>=3.20 in c:\users\yamin\.venv\lib\site-packages (from importlib-metadata<8.8.0,>=6.0->opentelemetry-api<2.0.0,>=1.31.0->google-adk) (3.23.0)
-Requirement already satisfied: opentelemetry-resourcedetector-gcp==1.*,>=1.5.0dev0 in c:\users\yamin\.venv\lib\site-packages (from opentelemetry-exporter-gcp-trace<2.0.0,>=1.9.0->google-adk) (1.9.0a0)
-Requirement already satisfied: opentelemetry-semantic-conventions==0.58b0 in c:\users\yamin\.venv\lib\site-packages (from opentelemetry-sdk<2.0.0,>=1.31.0->google-adk) (0.58b0)
-Requirement already satisfied: annotated-types>=0.6.0 in c:\users\yamin\.venv\lib\site-packages (from pydantic<3.0.0,>=2.0->google-adk) (0.7.0)
-Requirement already satisfied: pydantic-core==2.33.2 in c:\users\yamin\.venv\lib\site-packages (from pydantic<3.0.0,>=2.0->google-adk) (2.33.2)
-Requirement already satisfied: typing-inspection>=0.4.0 in c:\users\yamin\.venv\lib\site-packages (from pydantic<3.0.0,>=2.0->google-adk) (0.4.1)
-Requirement already satisfied: six>=1.5 in c:\users\yamin\.venv\lib\site-packages (from python-dateutil<3.0.0,>=2.9.0.post0->google-adk) (1.17.0)
-Requirement already satisfied: charset_normalizer<4,>=2 in c:\users\yamin\.venv\lib\site-packages (from requests<3.0.0,>=2.32.4->google-adk) (3.4.3)
-Requirement already satisfied: urllib3<3,>=1.21.1 in c:\users\yamin\.venv\lib\site-packages (from requests<3.0.0,>=2.32.4->google-adk) (2.5.0)
-Requirement already satisfied: pyasn1>=0.1.3 in c:\users\yamin\.venv\lib\site-packages (from rsa<5,>=3.1.4->google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0->google-api-python-client<3.0.0,>=2.157.0->google-adk) (0.6.1)
-Requirement already satisfied: numpy>=1.21 in c:\users\yamin\.venv\lib\site-packages (from shapely<3.0.0->google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk) (2.3.3)
-Requirement already satisfied: greenlet>=1 in c:\users\yamin\.venv\lib\site-packages (from sqlalchemy<3.0.0,>=2.0->google-adk) (3.2.4)
-Requirement already satisfied: tzdata in c:\users\yamin\.venv\lib\site-packages (from tzlocal<6.0,>=5.3->google-adk) (2025.2)
-Requirement already satisfied: lxml>=3.1.0 in c:\users\yamin\.venv\lib\site-packages (from python-docx) (6.0.1)
-Requirement already satisfied: attrs>=22.2.0 in c:\users\yamin\.venv\lib\site-packages (from jsonschema>=4.20.0->mcp<2.0.0,>=1.8.0->google-adk) (25.3.0)
-Requirement already satisfied: jsonschema-specifications>=2023.03.6 in c:\users\yamin\.venv\lib\site-packages (from jsonschema>=4.20.0->mcp<2.0.0,>=1.8.0->google-adk) (2025.9.1)
-Requirement already satisfied: referencing>=0.28.4 in c:\users\yamin\.venv\lib\site-packages (from jsonschema>=4.20.0->mcp<2.0.0,>=1.8.0->google-adk) (0.36.2)
-Requirement already satisfied: rpds-py>=0.7.1 in c:\users\yamin\.venv\lib\site-packages (from jsonschema>=4.20.0->mcp<2.0.0,>=1.8.0->google-adk) (0.27.1)
-Requirement already satisfied: alembic in c:\users\yamin\.venv\lib\site-packages (from sqlalchemy-spanner>=1.14.0->google-adk) (1.16.5)
-Requirement already satisfied: Mako in c:\users\yamin\.venv\lib\site-packages (from alembic->sqlalchemy-spanner>=1.14.0->google-adk) (1.3.10)
-Requirement already satisfied: cffi>=2.0.0 in c:\users\yamin\.venv\lib\site-packages (from cryptography->authlib<2.0.0,>=1.5.1->google-adk) (2.0.0)
-Requirement already satisfied: pycparser in c:\users\yamin\.venv\lib\site-packages (from cffi>=2.0.0->cryptography->authlib<2.0.0,>=1.5.1->google-adk) (2.23)
-Requirement already satisfied: MarkupSafe>=0.9.2 in c:\users\yamin\.venv\lib\site-packages (from Mako->alembic->sqlalchemy-spanner>=1.14.0->google-adk) (3.0.2)
+C:\Users\yamin\parent_folder>pip install google-adk python-docx PyPDF2
+Collecting google-adk
+  Using cached google_adk-1.14.1-py3-none-any.whl.metadata (11 kB)
+Collecting python-docx
+  Using cached python_docx-1.2.0-py3-none-any.whl.metadata (2.0 kB)
+Collecting PyPDF2
+  Using cached pypdf2-3.0.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting PyYAML<7.0.0,>=6.0.2 (from google-adk)
+  Using cached PyYAML-6.0.2-cp313-cp313-win_amd64.whl.metadata (2.1 kB)
+Collecting absolufy-imports<1.0.0,>=0.3.1 (from google-adk)
+  Using cached absolufy_imports-0.3.1-py2.py3-none-any.whl.metadata (2.9 kB)
+Collecting anyio<5.0.0,>=4.9.0 (from google-adk)
+  Using cached anyio-4.10.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting authlib<2.0.0,>=1.5.1 (from google-adk)
+  Using cached authlib-1.6.4-py2.py3-none-any.whl.metadata (9.8 kB)
+Collecting click<9.0.0,>=8.1.8 (from google-adk)
+  Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting fastapi<1.0.0,>=0.115.0 (from google-adk)
+  Downloading fastapi-0.117.1-py3-none-any.whl.metadata (28 kB)
+Collecting google-api-python-client<3.0.0,>=2.157.0 (from google-adk)
+  Using cached google_api_python_client-2.182.0-py3-none-any.whl.metadata (7.0 kB)
+Collecting google-cloud-aiplatform<2.0.0,>=1.95.1 (from google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Downloading google_cloud_aiplatform-1.115.0-py2.py3-none-any.whl.metadata (41 kB)
+Collecting google-cloud-bigtable>=2.32.0 (from google-adk)
+  Using cached google_cloud_bigtable-2.32.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting google-cloud-secret-manager<3.0.0,>=2.22.0 (from google-adk)
+  Using cached google_cloud_secret_manager-2.24.0-py3-none-any.whl.metadata (9.7 kB)
+Collecting google-cloud-spanner<4.0.0,>=3.56.0 (from google-adk)
+  Downloading google_cloud_spanner-3.58.0-py3-none-any.whl.metadata (11 kB)
+Collecting google-cloud-speech<3.0.0,>=2.30.0 (from google-adk)
+  Using cached google_cloud_speech-2.33.0-py3-none-any.whl.metadata (9.6 kB)
+Collecting google-cloud-storage<3.0.0,>=2.18.0 (from google-adk)
+  Using cached google_cloud_storage-2.19.0-py2.py3-none-any.whl.metadata (9.1 kB)
+Collecting google-genai<2.0.0,>=1.21.1 (from google-adk)
+  Using cached google_genai-1.38.0-py3-none-any.whl.metadata (43 kB)
+Collecting graphviz<1.0.0,>=0.20.2 (from google-adk)
+  Using cached graphviz-0.21-py3-none-any.whl.metadata (12 kB)
+Collecting mcp<2.0.0,>=1.8.0 (from google-adk)
+  Downloading mcp-1.14.1-py3-none-any.whl.metadata (75 kB)
+Collecting opentelemetry-api<2.0.0,>=1.31.0 (from google-adk)
+  Using cached opentelemetry_api-1.37.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting opentelemetry-exporter-gcp-trace<2.0.0,>=1.9.0 (from google-adk)
+  Using cached opentelemetry_exporter_gcp_trace-1.9.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting opentelemetry-sdk<2.0.0,>=1.31.0 (from google-adk)
+  Using cached opentelemetry_sdk-1.37.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting pydantic<3.0.0,>=2.0 (from google-adk)
+  Using cached pydantic-2.11.9-py3-none-any.whl.metadata (68 kB)
+Collecting python-dateutil<3.0.0,>=2.9.0.post0 (from google-adk)
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting python-dotenv<2.0.0,>=1.0.0 (from google-adk)
+  Using cached python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+Collecting requests<3.0.0,>=2.32.4 (from google-adk)
+  Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting sqlalchemy<3.0.0,>=2.0 (from google-adk)
+  Using cached sqlalchemy-2.0.43-cp313-cp313-win_amd64.whl.metadata (9.8 kB)
+Collecting sqlalchemy-spanner>=1.14.0 (from google-adk)
+  Using cached sqlalchemy_spanner-1.16.0-py3-none-any.whl.metadata (18 kB)
+Collecting starlette<1.0.0,>=0.46.2 (from google-adk)
+  Using cached starlette-0.48.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting tenacity<9.0.0,>=8.0.0 (from google-adk)
+  Using cached tenacity-8.5.0-py3-none-any.whl.metadata (1.2 kB)
+Collecting typing-extensions<5,>=4.5 (from google-adk)
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting tzlocal<6.0,>=5.3 (from google-adk)
+  Using cached tzlocal-5.3.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting uvicorn<1.0.0,>=0.34.0 (from google-adk)
+  Downloading uvicorn-0.36.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting watchdog<7.0.0,>=6.0.0 (from google-adk)
+  Using cached watchdog-6.0.0-py3-none-win_amd64.whl.metadata (44 kB)
+Collecting websockets<16.0.0,>=15.0.1 (from google-adk)
+  Using cached websockets-15.0.1-cp313-cp313-win_amd64.whl.metadata (7.0 kB)
+Collecting idna>=2.8 (from anyio<5.0.0,>=4.9.0->google-adk)
+  Using cached idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting sniffio>=1.1 (from anyio<5.0.0,>=4.9.0->google-adk)
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting cryptography (from authlib<2.0.0,>=1.5.1->google-adk)
+  Using cached cryptography-46.0.1-cp311-abi3-win_amd64.whl.metadata (5.7 kB)
+Collecting colorama (from click<9.0.0,>=8.1.8->google-adk)
+  Using cached colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB)
+Collecting httplib2<1.0.0,>=0.19.0 (from google-api-python-client<3.0.0,>=2.157.0->google-adk)
+  Using cached httplib2-0.31.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0 (from google-api-python-client<3.0.0,>=2.157.0->google-adk)
+  Using cached google_auth-2.40.3-py2.py3-none-any.whl.metadata (6.2 kB)
+Collecting google-auth-httplib2<1.0.0,>=0.2.0 (from google-api-python-client<3.0.0,>=2.157.0->google-adk)
+  Using cached google_auth_httplib2-0.2.0-py2.py3-none-any.whl.metadata (2.2 kB)
+Collecting google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5 (from google-api-python-client<3.0.0,>=2.157.0->google-adk)
+  Using cached google_api_core-2.25.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting uritemplate<5,>=3.0.1 (from google-api-python-client<3.0.0,>=2.157.0->google-adk)
+  Using cached uritemplate-4.2.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting googleapis-common-protos<2.0.0,>=1.56.2 (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client<3.0.0,>=2.157.0->google-adk)
+  Using cached googleapis_common_protos-1.70.0-py3-none-any.whl.metadata (9.3 kB)
+Collecting protobuf!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<7.0.0,>=3.19.5 (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client<3.0.0,>=2.157.0->google-adk)
+  Using cached protobuf-6.32.1-cp310-abi3-win_amd64.whl.metadata (593 bytes)
+Collecting proto-plus<2.0.0,>=1.22.3 (from google-api-core!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0,<3.0.0,>=1.31.5->google-api-python-client<3.0.0,>=2.157.0->google-adk)
+  Using cached proto_plus-1.26.1-py3-none-any.whl.metadata (2.2 kB)
+Collecting cachetools<6.0,>=2.0.0 (from google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0->google-api-python-client<3.0.0,>=2.157.0->google-adk)
+  Using cached cachetools-5.5.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting pyasn1-modules>=0.2.1 (from google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0->google-api-python-client<3.0.0,>=2.157.0->google-adk)
+  Using cached pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting rsa<5,>=3.1.4 (from google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0->google-api-python-client<3.0.0,>=2.157.0->google-adk)
+  Using cached rsa-4.9.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting packaging>=14.3 (from google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting google-cloud-bigquery!=3.20.0,<4.0.0,>=1.15.0 (from google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Downloading google_cloud_bigquery-3.38.0-py3-none-any.whl.metadata (8.0 kB)
+Collecting google-cloud-resource-manager<3.0.0,>=1.3.3 (from google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached google_cloud_resource_manager-1.14.2-py3-none-any.whl.metadata (9.6 kB)
+Collecting shapely<3.0.0 (from google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached shapely-2.1.1-cp313-cp313-win_amd64.whl.metadata (7.0 kB)
+Collecting docstring_parser<1 (from google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached docstring_parser-0.17.0-py3-none-any.whl.metadata (3.5 kB)
+Collecting grpcio<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0,>=1.34.1->google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached grpcio-1.75.0-cp313-cp313-win_amd64.whl.metadata (3.8 kB)
+Collecting grpcio-status<2.0.0,>=1.33.2 (from google-api-core[grpc]!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,<3.0.0,>=1.34.1->google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached grpcio_status-1.75.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting cloudpickle<4.0,>=3.0 (from google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached cloudpickle-3.1.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting google-cloud-trace<2 (from google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached google_cloud_trace-1.16.2-py3-none-any.whl.metadata (9.7 kB)
+Collecting google-cloud-logging<4 (from google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached google_cloud_logging-3.12.1-py2.py3-none-any.whl.metadata (5.0 kB)
+Collecting google-cloud-core<3.0.0,>=2.4.1 (from google-cloud-bigquery!=3.20.0,<4.0.0,>=1.15.0->google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached google_cloud_core-2.4.3-py2.py3-none-any.whl.metadata (2.7 kB)
+Collecting google-resumable-media<3.0.0,>=2.0.0 (from google-cloud-bigquery!=3.20.0,<4.0.0,>=1.15.0->google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached google_resumable_media-2.7.2-py2.py3-none-any.whl.metadata (2.2 kB)
+Collecting google-cloud-appengine-logging<2.0.0,>=0.1.3 (from google-cloud-logging<4->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached google_cloud_appengine_logging-1.6.2-py3-none-any.whl.metadata (9.9 kB)
+Collecting google-cloud-audit-log<1.0.0,>=0.3.1 (from google-cloud-logging<4->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached google_cloud_audit_log-0.3.2-py3-none-any.whl.metadata (9.0 kB)
+Collecting grpc-google-iam-v1<1.0.0,>=0.12.4 (from google-cloud-logging<4->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached grpc_google_iam_v1-0.14.2-py3-none-any.whl.metadata (9.1 kB)
+Collecting sqlparse>=0.4.4 (from google-cloud-spanner<4.0.0,>=3.56.0->google-adk)
+  Using cached sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting grpc-interceptor>=0.15.4 (from google-cloud-spanner<4.0.0,>=3.56.0->google-adk)
+  Using cached grpc_interceptor-0.15.4-py3-none-any.whl.metadata (8.4 kB)
+Collecting google-crc32c<2.0dev,>=1.0 (from google-cloud-storage<3.0.0,>=2.18.0->google-adk)
+  Using cached google_crc32c-1.7.1-cp313-cp313-win_amd64.whl.metadata (2.4 kB)
+Collecting httpx<1.0.0,>=0.28.1 (from google-genai<2.0.0,>=1.21.1->google-adk)
+  Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting pyparsing<4,>=3.0.4 (from httplib2<1.0.0,>=0.19.0->google-api-python-client<3.0.0,>=2.157.0->google-adk)
+  Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+Collecting certifi (from httpx<1.0.0,>=0.28.1->google-genai<2.0.0,>=1.21.1->google-adk)
+  Using cached certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+Collecting httpcore==1.* (from httpx<1.0.0,>=0.28.1->google-genai<2.0.0,>=1.21.1->google-adk)
+  Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0.0,>=0.28.1->google-genai<2.0.0,>=1.21.1->google-adk)
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting httpx-sse>=0.4 (from mcp<2.0.0,>=1.8.0->google-adk)
+  Using cached httpx_sse-0.4.1-py3-none-any.whl.metadata (9.4 kB)
+Collecting jsonschema>=4.20.0 (from mcp<2.0.0,>=1.8.0->google-adk)
+  Using cached jsonschema-4.25.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting pydantic-settings>=2.5.2 (from mcp<2.0.0,>=1.8.0->google-adk)
+  Using cached pydantic_settings-2.10.1-py3-none-any.whl.metadata (3.4 kB)
+Collecting python-multipart>=0.0.9 (from mcp<2.0.0,>=1.8.0->google-adk)
+  Using cached python_multipart-0.0.20-py3-none-any.whl.metadata (1.8 kB)
+Collecting pywin32>=310 (from mcp<2.0.0,>=1.8.0->google-adk)
+  Using cached pywin32-311-cp313-cp313-win_amd64.whl.metadata (10 kB)
+Collecting sse-starlette>=1.6.1 (from mcp<2.0.0,>=1.8.0->google-adk)
+  Using cached sse_starlette-3.0.2-py3-none-any.whl.metadata (11 kB)
+Collecting importlib-metadata<8.8.0,>=6.0 (from opentelemetry-api<2.0.0,>=1.31.0->google-adk)
+  Using cached importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)
+Collecting zipp>=3.20 (from importlib-metadata<8.8.0,>=6.0->opentelemetry-api<2.0.0,>=1.31.0->google-adk)
+  Using cached zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)
+Collecting opentelemetry-resourcedetector-gcp==1.*,>=1.5.0dev0 (from opentelemetry-exporter-gcp-trace<2.0.0,>=1.9.0->google-adk)
+  Using cached opentelemetry_resourcedetector_gcp-1.9.0a0-py3-none-any.whl.metadata (2.4 kB)
+Collecting opentelemetry-semantic-conventions==0.58b0 (from opentelemetry-sdk<2.0.0,>=1.31.0->google-adk)
+  Using cached opentelemetry_semantic_conventions-0.58b0-py3-none-any.whl.metadata (2.4 kB)
+Collecting annotated-types>=0.6.0 (from pydantic<3.0.0,>=2.0->google-adk)
+  Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.33.2 (from pydantic<3.0.0,>=2.0->google-adk)
+  Using cached pydantic_core-2.33.2-cp313-cp313-win_amd64.whl.metadata (6.9 kB)
+Collecting typing-inspection>=0.4.0 (from pydantic<3.0.0,>=2.0->google-adk)
+  Using cached typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting six>=1.5 (from python-dateutil<3.0.0,>=2.9.0.post0->google-adk)
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3.0.0,>=2.32.4->google-adk)
+  Using cached charset_normalizer-3.4.3-cp313-cp313-win_amd64.whl.metadata (37 kB)
+Collecting urllib3<3,>=1.21.1 (from requests<3.0.0,>=2.32.4->google-adk)
+  Using cached urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting pyasn1>=0.1.3 (from rsa<5,>=3.1.4->google-auth!=2.24.0,!=2.25.0,<3.0.0,>=1.32.0->google-api-python-client<3.0.0,>=2.157.0->google-adk)
+  Using cached pyasn1-0.6.1-py3-none-any.whl.metadata (8.4 kB)
+Collecting numpy>=1.21 (from shapely<3.0.0->google-cloud-aiplatform<2.0.0,>=1.95.1->google-cloud-aiplatform[agent-engines]<2.0.0,>=1.95.1->google-adk)
+  Using cached numpy-2.3.3-cp313-cp313-win_amd64.whl.metadata (60 kB)
+Collecting greenlet>=1 (from sqlalchemy<3.0.0,>=2.0->google-adk)
+  Using cached greenlet-3.2.4-cp313-cp313-win_amd64.whl.metadata (4.2 kB)
+Collecting tzdata (from tzlocal<6.0,>=5.3->google-adk)
+  Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting lxml>=3.1.0 (from python-docx)
+  Downloading lxml-6.0.2-cp313-cp313-win_amd64.whl.metadata (3.7 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=4.20.0->mcp<2.0.0,>=1.8.0->google-adk)
+  Using cached attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.20.0->mcp<2.0.0,>=1.8.0->google-adk)
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.20.0->mcp<2.0.0,>=1.8.0->google-adk)
+  Using cached referencing-0.36.2-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema>=4.20.0->mcp<2.0.0,>=1.8.0->google-adk)
+  Using cached rpds_py-0.27.1-cp313-cp313-win_amd64.whl.metadata (4.3 kB)
+Collecting alembic (from sqlalchemy-spanner>=1.14.0->google-adk)
+  Using cached alembic-1.16.5-py3-none-any.whl.metadata (7.3 kB)
+Collecting Mako (from alembic->sqlalchemy-spanner>=1.14.0->google-adk)
+  Using cached mako-1.3.10-py3-none-any.whl.metadata (2.9 kB)
+Collecting cffi>=2.0.0 (from cryptography->authlib<2.0.0,>=1.5.1->google-adk)
+  Using cached cffi-2.0.0-cp313-cp313-win_amd64.whl.metadata (2.6 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography->authlib<2.0.0,>=1.5.1->google-adk)
+  Using cached pycparser-2.23-py3-none-any.whl.metadata (993 bytes)
+Collecting MarkupSafe>=0.9.2 (from Mako->alembic->sqlalchemy-spanner>=1.14.0->google-adk)
+  Using cached MarkupSafe-3.0.2-cp313-cp313-win_amd64.whl.metadata (4.1 kB)
+Using cached google_adk-1.14.1-py3-none-any.whl (1.9 MB)
+Using cached absolufy_imports-0.3.1-py2.py3-none-any.whl (5.9 kB)
+Using cached anyio-4.10.0-py3-none-any.whl (107 kB)
+Using cached authlib-1.6.4-py2.py3-none-any.whl (243 kB)
+Downloading click-8.3.0-py3-none-any.whl (107 kB)
+Downloading fastapi-0.117.1-py3-none-any.whl (95 kB)
+Using cached google_api_python_client-2.182.0-py3-none-any.whl (14.2 MB)
+Using cached google_api_core-2.25.1-py3-none-any.whl (160 kB)
+Using cached google_auth-2.40.3-py2.py3-none-any.whl (216 kB)
+Using cached cachetools-5.5.2-py3-none-any.whl (10 kB)
+Using cached google_auth_httplib2-0.2.0-py2.py3-none-any.whl (9.3 kB)
+Downloading google_cloud_aiplatform-1.115.0-py2.py3-none-any.whl (8.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.0/8.0 MB 10.0 MB/s  0:00:00
+Using cached docstring_parser-0.17.0-py3-none-any.whl (36 kB)
+Using cached cloudpickle-3.1.1-py3-none-any.whl (20 kB)
+Downloading google_cloud_bigquery-3.38.0-py3-none-any.whl (259 kB)
+Using cached google_cloud_core-2.4.3-py2.py3-none-any.whl (29 kB)
+Using cached google_cloud_logging-3.12.1-py2.py3-none-any.whl (229 kB)
+Using cached google_cloud_appengine_logging-1.6.2-py3-none-any.whl (16 kB)
+Using cached google_cloud_audit_log-0.3.2-py3-none-any.whl (32 kB)
+Using cached google_cloud_resource_manager-1.14.2-py3-none-any.whl (394 kB)
+Using cached google_cloud_secret_manager-2.24.0-py3-none-any.whl (218 kB)
+Downloading google_cloud_spanner-3.58.0-py3-none-any.whl (501 kB)
+Using cached google_cloud_speech-2.33.0-py3-none-any.whl (335 kB)
+Using cached google_cloud_storage-2.19.0-py2.py3-none-any.whl (131 kB)
+Using cached google_cloud_trace-1.16.2-py3-none-any.whl (103 kB)
+Using cached google_crc32c-1.7.1-cp313-cp313-win_amd64.whl (33 kB)
+Using cached google_genai-1.38.0-py3-none-any.whl (245 kB)
+Using cached google_resumable_media-2.7.2-py2.py3-none-any.whl (81 kB)
+Using cached googleapis_common_protos-1.70.0-py3-none-any.whl (294 kB)
+Using cached graphviz-0.21-py3-none-any.whl (47 kB)
+Using cached grpc_google_iam_v1-0.14.2-py3-none-any.whl (19 kB)
+Using cached grpcio-1.75.0-cp313-cp313-win_amd64.whl (4.6 MB)
+Using cached grpcio_status-1.75.0-py3-none-any.whl (14 kB)
+Using cached httplib2-0.31.0-py3-none-any.whl (91 kB)
+Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading mcp-1.14.1-py3-none-any.whl (163 kB)
+Using cached opentelemetry_api-1.37.0-py3-none-any.whl (65 kB)
+Using cached importlib_metadata-8.7.0-py3-none-any.whl (27 kB)
+Using cached opentelemetry_exporter_gcp_trace-1.9.0-py3-none-any.whl (13 kB)
+Using cached opentelemetry_resourcedetector_gcp-1.9.0a0-py3-none-any.whl (20 kB)
+Using cached opentelemetry_sdk-1.37.0-py3-none-any.whl (131 kB)
+Using cached opentelemetry_semantic_conventions-0.58b0-py3-none-any.whl (207 kB)
+Using cached proto_plus-1.26.1-py3-none-any.whl (50 kB)
+Using cached protobuf-6.32.1-cp310-abi3-win_amd64.whl (435 kB)
+Using cached pydantic-2.11.9-py3-none-any.whl (444 kB)
+Using cached pydantic_core-2.33.2-cp313-cp313-win_amd64.whl (2.0 MB)
+Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+Using cached PyYAML-6.0.2-cp313-cp313-win_amd64.whl (156 kB)
+Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+Using cached charset_normalizer-3.4.3-cp313-cp313-win_amd64.whl (107 kB)
+Using cached idna-3.10-py3-none-any.whl (70 kB)
+Using cached rsa-4.9.1-py3-none-any.whl (34 kB)
+Using cached shapely-2.1.1-cp313-cp313-win_amd64.whl (1.7 MB)
+Using cached sqlalchemy-2.0.43-cp313-cp313-win_amd64.whl (2.1 MB)
+Using cached starlette-0.48.0-py3-none-any.whl (73 kB)
+Using cached tenacity-8.5.0-py3-none-any.whl (28 kB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Using cached tzlocal-5.3.1-py3-none-any.whl (18 kB)
+Using cached uritemplate-4.2.0-py3-none-any.whl (11 kB)
+Using cached urllib3-2.5.0-py3-none-any.whl (129 kB)
+Downloading uvicorn-0.36.0-py3-none-any.whl (67 kB)
+Using cached watchdog-6.0.0-py3-none-win_amd64.whl (79 kB)
+Using cached websockets-15.0.1-cp313-cp313-win_amd64.whl (176 kB)
+Using cached python_docx-1.2.0-py3-none-any.whl (252 kB)
+Using cached pypdf2-3.0.1-py3-none-any.whl (232 kB)
+Using cached annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Using cached certifi-2025.8.3-py3-none-any.whl (161 kB)
+Using cached google_cloud_bigtable-2.32.0-py3-none-any.whl (520 kB)
+Using cached greenlet-3.2.4-cp313-cp313-win_amd64.whl (299 kB)
+Using cached grpc_interceptor-0.15.4-py3-none-any.whl (20 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached httpx_sse-0.4.1-py3-none-any.whl (8.1 kB)
+Using cached jsonschema-4.25.1-py3-none-any.whl (90 kB)
+Using cached attrs-25.3.0-py3-none-any.whl (63 kB)
+Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading lxml-6.0.2-cp313-cp313-win_amd64.whl (4.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.0/4.0 MB 13.0 MB/s  0:00:00
+Using cached numpy-2.3.3-cp313-cp313-win_amd64.whl (12.8 MB)
+Using cached packaging-25.0-py3-none-any.whl (66 kB)
+Using cached pyasn1-0.6.1-py3-none-any.whl (83 kB)
+Using cached pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+Using cached pydantic_settings-2.10.1-py3-none-any.whl (45 kB)
+Using cached python_multipart-0.0.20-py3-none-any.whl (24 kB)
+Using cached pywin32-311-cp313-cp313-win_amd64.whl (9.5 MB)
+Using cached referencing-0.36.2-py3-none-any.whl (26 kB)
+Using cached rpds_py-0.27.1-cp313-cp313-win_amd64.whl (232 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached sqlalchemy_spanner-1.16.0-py3-none-any.whl (32 kB)
+Using cached sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Using cached sse_starlette-3.0.2-py3-none-any.whl (11 kB)
+Using cached typing_inspection-0.4.1-py3-none-any.whl (14 kB)
+Using cached zipp-3.23.0-py3-none-any.whl (10 kB)
+Using cached alembic-1.16.5-py3-none-any.whl (247 kB)
+Using cached colorama-0.4.6-py2.py3-none-any.whl (25 kB)
+Using cached cryptography-46.0.1-cp311-abi3-win_amd64.whl (3.5 MB)
+Using cached cffi-2.0.0-cp313-cp313-win_amd64.whl (183 kB)
+Using cached mako-1.3.10-py3-none-any.whl (78 kB)
+Using cached MarkupSafe-3.0.2-cp313-cp313-win_amd64.whl (15 kB)
+Using cached pycparser-2.23-py3-none-any.whl (118 kB)
+Using cached tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Installing collected packages: pywin32, zipp, websockets, watchdog, urllib3, uritemplate, tzdata, typing-extensions, tenacity, sqlparse, sniffio, six, rpds-py, PyYAML, python-multipart, python-dotenv, PyPDF2, pyparsing, pycparser, pyasn1, protobuf, packaging, numpy, MarkupSafe, lxml, idna, httpx-sse, h11, greenlet, graphviz, google-crc32c, docstring_parser, colorama, cloudpickle, charset_normalizer, certifi, cachetools, attrs, annotated-types, absolufy-imports, tzlocal, typing-inspection, sqlalchemy, shapely, rsa, requests, referencing, python-docx, python-dateutil, pydantic-core, pyasn1-modules, proto-plus, Mako, importlib-metadata, httplib2, httpcore, grpcio, googleapis-common-protos, google-resumable-media, click, cffi, anyio, uvicorn, starlette, sse-starlette, pydantic, opentelemetry-api, jsonschema-specifications, httpx, grpcio-status, grpc-interceptor, google-cloud-audit-log, google-auth, cryptography, alembic, pydantic-settings, opentelemetry-semantic-conventions, jsonschema, grpc-google-iam-v1, google-genai, google-auth-httplib2, google-api-core, fastapi, authlib, opentelemetry-sdk, mcp, google-cloud-core, google-api-python-client, opentelemetry-resourcedetector-gcp, google-cloud-trace, google-cloud-storage, google-cloud-speech, google-cloud-spanner, google-cloud-secret-manager, google-cloud-resource-manager, google-cloud-bigtable, google-cloud-bigquery, google-cloud-appengine-logging, sqlalchemy-spanner, opentelemetry-exporter-gcp-trace, google-cloud-logging, google-cloud-aiplatform, google-adk
+Successfully installed Mako-1.3.10 MarkupSafe-3.0.2 PyPDF2-3.0.1 PyYAML-6.0.2 absolufy-imports-0.3.1 alembic-1.16.5 annotated-types-0.7.0 anyio-4.10.0 attrs-25.3.0 authlib-1.6.4 cachetools-5.5.2 certifi-2025.8.3 cffi-2.0.0 charset_normalizer-3.4.3 click-8.3.0 cloudpickle-3.1.1 colorama-0.4.6 cryptography-46.0.1 docstring_parser-0.17.0 fastapi-0.117.1 google-adk-1.14.1 google-api-core-2.25.1 google-api-python-client-2.182.0 google-auth-2.40.3 google-auth-httplib2-0.2.0 google-cloud-aiplatform-1.115.0 google-cloud-appengine-logging-1.6.2 google-cloud-audit-log-0.3.2 google-cloud-bigquery-3.38.0 google-cloud-bigtable-2.32.0 google-cloud-core-2.4.3 google-cloud-logging-3.12.1 google-cloud-resource-manager-1.14.2 google-cloud-secret-manager-2.24.0 google-cloud-spanner-3.58.0 google-cloud-speech-2.33.0 google-cloud-storage-2.19.0 google-cloud-trace-1.16.2 google-crc32c-1.7.1 google-genai-1.38.0 google-resumable-media-2.7.2 googleapis-common-protos-1.70.0 graphviz-0.21 greenlet-3.2.4 grpc-google-iam-v1-0.14.2 grpc-interceptor-0.15.4 grpcio-1.75.0 grpcio-status-1.75.0 h11-0.16.0 httpcore-1.0.9 httplib2-0.31.0 httpx-0.28.1 httpx-sse-0.4.1 idna-3.10 importlib-metadata-8.7.0 jsonschema-4.25.1 jsonschema-specifications-2025.9.1 lxml-6.0.2 mcp-1.14.1 numpy-2.3.3 opentelemetry-api-1.37.0 opentelemetry-exporter-gcp-trace-1.9.0 opentelemetry-resourcedetector-gcp-1.9.0a0 opentelemetry-sdk-1.37.0 opentelemetry-semantic-conventions-0.58b0 packaging-25.0 proto-plus-1.26.1 protobuf-6.32.1 pyasn1-0.6.1 pyasn1-modules-0.4.2 pycparser-2.23 pydantic-2.11.9 pydantic-core-2.33.2 pydantic-settings-2.10.1 pyparsing-3.2.5 python-dateutil-2.9.0.post0 python-docx-1.2.0 python-dotenv-1.1.1 python-multipart-0.0.20 pywin32-311 referencing-0.36.2 requests-2.32.5 rpds-py-0.27.1 rsa-4.9.1 shapely-2.1.1 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.43 sqlalchemy-spanner-1.16.0 sqlparse-0.5.3 sse-starlette-3.0.2 starlette-0.48.0 tenacity-8.5.0 typing-extensions-4.15.0 typing-inspection-0.4.1 tzdata-2025.2 tzlocal-5.3.1 uritemplate-4.2.0 urllib3-2.5.0 uvicorn-0.36.0 watchdog-6.0.0 websockets-15.0.1 zipp-3.23.0
 
-(.venv) C:\Users\yamin>mkdir cv_parser_agent
+C:\Users\yamin\parent_folder>mkdir cv_parser_agent
+A subdirectory or file cv_parser_agent already exists.
 
-(.venv) C:\Users\yamin>echo "from . import agent" > cv_parser_agent/__init__.py
-
-(.venv) C:\Users\yamin>cd parent_folder
-
-(.venv) C:\Users\yamin\parent_folder>adk web
-C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\fast_api.py:175: UserWarning: [EXPERIMENTAL] InMemoryCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+C:\Users\yamin\parent_folder>adk web
+C:\Users\yamin\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\adk\cli\fast_api.py:175: UserWarning: [EXPERIMENTAL] InMemoryCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
   credential_service = InMemoryCredentialService()
-C:\Users\yamin\.venv\Lib\site-packages\google\adk\auth\credential_service\in_memory_credential_service.py:33: UserWarning: [EXPERIMENTAL] BaseCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+C:\Users\yamin\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\adk\auth\credential_service\in_memory_credential_service.py:33: UserWarning: [EXPERIMENTAL] BaseCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
   super().__init__()
-INFO:     Started server process [32784]
+INFO:     Started server process [21164]
 INFO:     Waiting for application startup.
 
 +-----------------------------------------------------------------------------+
@@ -134,43 +342,48 @@ INFO:     Waiting for application startup.
 
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO:     127.0.0.1:54707 - "GET / HTTP/1.1" 307 Temporary Redirect
-INFO:     127.0.0.1:54707 - "GET /list-apps?relative_path=./ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54707 - "POST /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54707 - "GET /apps/cv_parser_agent/eval_sets HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49284 - "GET /apps/cv_parser_agent/eval_results HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49284 - "GET /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49284 - "GET /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50445 - "POST /run_sse HTTP/1.1" 200 OK
-2025-09-18 12:22:36,997 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:22:36,998 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:22:37,245 - INFO - agent_loader.py:126 - Found root_agent in cv_parser_agent.agent
-C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\adk_web_server.py:330: UserWarning: [EXPERIMENTAL] App: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+INFO:     127.0.0.1:50376 - "GET / HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:50376 - "GET /dev-ui/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50376 - "GET /dev-ui/chunk-EQDQRRRY.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52723 - "GET /dev-ui/polyfills-B6TNHZQ6.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55905 - "GET /dev-ui/main-W7QZBYAR.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52723 - "GET /dev-ui/styles-4VDSPQ37.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55905 - "GET /dev-ui/assets/config/runtime-config.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55905 - "GET /dev-ui/assets/ADK-512-color.svg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55905 - "GET /list-apps?relative_path=./ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55905 - "POST /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55905 - "GET /apps/cv_parser_agent/eval_sets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52723 - "GET /apps/cv_parser_agent/eval_results HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52723 - "GET /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52723 - "GET /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51420 - "POST /run_sse HTTP/1.1" 200 OK
+2025-09-22 22:24:26,752 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
+2025-09-22 22:24:26,753 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
+2025-09-22 22:24:30,698 - INFO - agent_loader.py:126 - Found root_agent in cv_parser_agent.agent
+C:\Users\yamin\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\adk\cli\adk_web_server.py:330: UserWarning: [EXPERIMENTAL] App: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
   agentic_app = App(
-2025-09-18 12:22:39,378 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:22:39,379 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:22:41,449 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:22:41,454 - INFO - google_llm.py:161 - Response received from the model.
-2025-09-18 12:22:41,454 - WARNING - types.py:5522 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
-2025-09-18 12:22:43,714 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:22:43,714 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:22:45,313 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:22:45,317 - INFO - google_llm.py:161 - Response received from the model.
-INFO:     127.0.0.1:50445 - "GET /apps/cv_parser_agent/users/user/sessions/3f3d02f5-b686-4d8b-9f5f-639162be547f HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49943 - "GET /debug/trace/session/3f3d02f5-b686-4d8b-9f5f-639162be547f HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58847 - "POST /run_sse HTTP/1.1" 200 OK
-2025-09-18 12:26:40,687 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:26:42,787 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:26:42,788 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:26:43,933 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:26:43,936 - INFO - google_llm.py:161 - Response received from the model.
-2025-09-18 12:26:43,938 - WARNING - types.py:5522 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
-2025-09-18 12:26:46,261 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:26:46,262 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:26:48,849 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:26:48,854 - INFO - google_llm.py:161 - Response received from the model.
-INFO:     127.0.0.1:58847 - "GET /apps/cv_parser_agent/users/user/sessions/3f3d02f5-b686-4d8b-9f5f-639162be547f HTTP/1.1" 200 OK
-INFO:     127.0.0.1:63053 - "GET /debug/trace/session/3f3d02f5-b686-4d8b-9f5f-639162be547f HTTP/1.1" 200 OK
+2025-09-22 22:24:32,258 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-09-22 22:24:32,259 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
+2025-09-22 22:24:38,269 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-22 22:24:38,272 - INFO - google_llm.py:161 - Response received from the model.
+INFO:     127.0.0.1:51420 - "GET /apps/cv_parser_agent/users/user/sessions/88139541-f7e5-4db8-b779-126faec54005 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64174 - "GET /debug/trace/session/88139541-f7e5-4db8-b779-126faec54005 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52352 - "POST /run_sse HTTP/1.1" 200 OK
+2025-09-22 22:24:50,001 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
+2025-09-22 22:24:51,782 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-09-22 22:24:51,783 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
+2025-09-22 22:24:58,431 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-22 22:24:58,438 - INFO - google_llm.py:161 - Response received from the model.
+INFO:     127.0.0.1:52352 - "GET /apps/cv_parser_agent/users/user/sessions/88139541-f7e5-4db8-b779-126faec54005 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59776 - "GET /debug/trace/session/88139541-f7e5-4db8-b779-126faec54005 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49670 - "POST /run_sse HTTP/1.1" 200 OK
+2025-09-22 22:26:25,002 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
+2025-09-22 22:26:26,610 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-09-22 22:26:26,614 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
+2025-09-22 22:26:31,722 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-22 22:26:31,726 - INFO - google_llm.py:161 - Response received from the model.
+INFO:     127.0.0.1:49670 - "GET /apps/cv_parser_agent/users/user/sessions/88139541-f7e5-4db8-b779-126faec54005 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63646 - "GET /debug/trace/session/88139541-f7e5-4db8-b779-126faec54005 HTTP/1.1" 200 OK
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 
@@ -179,16 +392,16 @@ INFO:     Waiting for application shutdown.
 +-----------------------------------------------------------------------------+
 
 INFO:     Application shutdown complete.
-INFO:     Finished server process [32784]
+INFO:     Finished server process [21164]
 
 Aborted!
 
-(.venv) C:\Users\yamin\parent_folder>adk web
-C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\fast_api.py:175: UserWarning: [EXPERIMENTAL] InMemoryCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+C:\Users\yamin\parent_folder>adk web
+C:\Users\yamin\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\adk\cli\fast_api.py:175: UserWarning: [EXPERIMENTAL] InMemoryCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
   credential_service = InMemoryCredentialService()
-C:\Users\yamin\.venv\Lib\site-packages\google\adk\auth\credential_service\in_memory_credential_service.py:33: UserWarning: [EXPERIMENTAL] BaseCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+C:\Users\yamin\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\adk\auth\credential_service\in_memory_credential_service.py:33: UserWarning: [EXPERIMENTAL] BaseCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
   super().__init__()
-INFO:     Started server process [8280]
+INFO:     Started server process [864]
 INFO:     Waiting for application startup.
 
 +-----------------------------------------------------------------------------+
@@ -199,153 +412,40 @@ INFO:     Waiting for application startup.
 
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO:     127.0.0.1:51335 - "GET / HTTP/1.1" 307 Temporary Redirect
-INFO:     127.0.0.1:51335 - "GET /list-apps?relative_path=./ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51335 - "POST /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51335 - "GET /apps/cv_parser_agent/eval_sets HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55062 - "GET /apps/cv_parser_agent/eval_results HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55062 - "GET /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55062 - "GET /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57117 - "POST /run_sse HTTP/1.1" 200 OK
-2025-09-18 12:27:50,485 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:27:50,486 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:27:50,767 - ERROR - adk_web_server.py:1076 - Error in event_generator: Fail to load 'cv_parser_agent' module. cannot import name 'Tool' from 'google.adk.tools' (C:\Users\yamin\.venv\Lib\site-packages\google\adk\tools\__init__.py)
-Traceback (most recent call last):
-  File "C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\adk_web_server.py", line 1056, in event_generator
-    runner = await self.get_runner_async(req.app_name)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\adk_web_server.py", line 327, in get_runner_async
-    agent_or_app = self.agent_loader.load_agent(app_name)
-  File "C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\utils\agent_loader.py", line 234, in load_agent
-    agent_or_app = self._perform_load(agent_name)
-  File "C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\utils\agent_loader.py", line 207, in _perform_load
-    if root_agent := self._load_from_module_or_package(actual_agent_name):
-                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\utils\agent_loader.py", line 104, in _load_from_module_or_package
-    raise e
-  File "C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\utils\agent_loader.py", line 70, in _load_from_module_or_package
-    module_candidate = importlib.import_module(agent_name)
-  File "C:\Users\yamin\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py", line 88, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "C:\Users\yamin\parent_folder\cv_parser_agent\__init__.py", line 1, in <module>
-    from . import agent
-  File "C:\Users\yamin\parent_folder\cv_parser_agent\agent.py", line 7, in <module>
-    from google.adk.tools import Tool, File
-ImportError: Fail to load 'cv_parser_agent' module. cannot import name 'Tool' from 'google.adk.tools' (C:\Users\yamin\.venv\Lib\site-packages\google\adk\tools\__init__.py)
-INFO:     127.0.0.1:57117 - "GET /apps/cv_parser_agent/users/user/sessions/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52927 - "GET /debug/trace/session/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54934 - "POST /run_sse HTTP/1.1" 200 OK
-2025-09-18 12:28:00,685 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:28:00,687 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:28:00,689 - ERROR - adk_web_server.py:1076 - Error in event_generator: Fail to load 'cv_parser_agent' module. cannot import name 'Tool' from 'google.adk.tools' (C:\Users\yamin\.venv\Lib\site-packages\google\adk\tools\__init__.py)
-Traceback (most recent call last):
-  File "C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\adk_web_server.py", line 1056, in event_generator
-    runner = await self.get_runner_async(req.app_name)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\adk_web_server.py", line 327, in get_runner_async
-    agent_or_app = self.agent_loader.load_agent(app_name)
-  File "C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\utils\agent_loader.py", line 234, in load_agent
-    agent_or_app = self._perform_load(agent_name)
-  File "C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\utils\agent_loader.py", line 207, in _perform_load
-    if root_agent := self._load_from_module_or_package(actual_agent_name):
-                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\utils\agent_loader.py", line 104, in _load_from_module_or_package
-    raise e
-  File "C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\utils\agent_loader.py", line 70, in _load_from_module_or_package
-    module_candidate = importlib.import_module(agent_name)
-  File "C:\Users\yamin\AppData\Local\Programs\Python\Python313\Lib\importlib\__init__.py", line 88, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "C:\Users\yamin\parent_folder\cv_parser_agent\__init__.py", line 1, in <module>
-    from . import agent
-  File "C:\Users\yamin\parent_folder\cv_parser_agent\agent.py", line 7, in <module>
-    from google.adk.tools import Tool, File
-ImportError: Fail to load 'cv_parser_agent' module. cannot import name 'Tool' from 'google.adk.tools' (C:\Users\yamin\.venv\Lib\site-packages\google\adk\tools\__init__.py)
-INFO:     127.0.0.1:54934 - "GET /apps/cv_parser_agent/users/user/sessions/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52295 - "GET /debug/trace/session/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60936 - "POST /run_sse HTTP/1.1" 200 OK
-2025-09-18 12:28:12,777 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:28:12,778 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:28:12,786 - INFO - agent_loader.py:126 - Found root_agent in cv_parser_agent.agent
-C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\adk_web_server.py:330: UserWarning: [EXPERIMENTAL] App: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+INFO:     127.0.0.1:62373 - "GET / HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:62373 - "GET /dev-ui/ HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:62373 - "GET /dev-ui/chunk-EQDQRRRY.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:61880 - "GET /dev-ui/polyfills-B6TNHZQ6.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:51914 - "GET /dev-ui/styles-4VDSPQ37.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:49675 - "GET /dev-ui/main-W7QZBYAR.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:49675 - "GET /dev-ui/assets/config/runtime-config.json HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:49675 - "GET /dev-ui/assets/ADK-512-color.svg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:49675 - "GET /list-apps?relative_path=./ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49675 - "POST /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49675 - "GET /apps/cv_parser_agent/eval_sets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51914 - "GET /apps/cv_parser_agent/eval_results HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51914 - "GET /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51914 - "GET /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61866 - "POST /run_sse HTTP/1.1" 200 OK
+2025-09-22 22:34:09,723 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
+2025-09-22 22:34:09,724 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
+2025-09-22 22:34:09,959 - INFO - agent_loader.py:126 - Found root_agent in cv_parser_agent.agent
+C:\Users\yamin\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\adk\cli\adk_web_server.py:330: UserWarning: [EXPERIMENTAL] App: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
   agentic_app = App(
-2025-09-18 12:28:14,984 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:28:14,985 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:28:17,333 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:28:17,338 - INFO - google_llm.py:161 - Response received from the model.
-2025-09-18 12:28:17,339 - WARNING - types.py:5522 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
-2025-09-18 12:28:19,699 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:28:19,700 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:28:20,650 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:28:20,655 - INFO - google_llm.py:161 - Response received from the model.
-INFO:     127.0.0.1:60936 - "GET /apps/cv_parser_agent/users/user/sessions/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53889 - "GET /debug/trace/session/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65504 - "POST /run_sse HTTP/1.1" 200 OK
-2025-09-18 12:28:40,734 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:28:42,867 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:28:42,868 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:28:44,106 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:28:44,109 - INFO - google_llm.py:161 - Response received from the model.
-INFO:     127.0.0.1:65504 - "GET /apps/cv_parser_agent/users/user/sessions/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:63933 - "GET /debug/trace/session/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65527 - "POST /run_sse HTTP/1.1" 200 OK
-2025-09-18 12:29:05,582 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:29:07,678 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:29:07,679 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:29:08,851 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:29:08,861 - INFO - google_llm.py:161 - Response received from the model.
-2025-09-18 12:29:08,862 - WARNING - types.py:5522 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
-2025-09-18 12:29:11,139 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:29:11,140 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:29:12,238 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:29:12,241 - INFO - google_llm.py:161 - Response received from the model.
-INFO:     127.0.0.1:65527 - "GET /apps/cv_parser_agent/users/user/sessions/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55726 - "GET /debug/trace/session/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53604 - "POST /run_sse HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:53604 - "GET /apps/cv_parser_agent/users/user/sessions/0fade881-edc7-483f-a425-ee7990f299e0 HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:49206 - "GET /debug/trace/session/0fade881-edc7-483f-a425-ee7990f299e0 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60641 - "POST /run_sse HTTP/1.1" 200 OK
-2025-09-18 12:32:17,802 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:32:20,014 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:32:20,015 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:32:22,172 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:32:22,175 - INFO - google_llm.py:161 - Response received from the model.
-2025-09-18 12:32:22,176 - WARNING - types.py:5522 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
-2025-09-18 12:32:24,435 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:32:24,436 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:32:26,577 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:32:26,581 - INFO - google_llm.py:161 - Response received from the model.
-INFO:     127.0.0.1:60641 - "GET /apps/cv_parser_agent/users/user/sessions/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54126 - "GET /debug/trace/session/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56912 - "POST /run_sse HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:56912 - "GET /apps/cv_parser_agent/users/user/sessions/3f3d02f5-b686-4d8b-9f5f-639162be547f HTTP/1.1" 404 Not Found
-INFO:     127.0.0.1:58680 - "GET /debug/trace/session/3f3d02f5-b686-4d8b-9f5f-639162be547f HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56400 - "POST /run_sse HTTP/1.1" 200 OK
-2025-09-18 12:33:22,504 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:33:24,589 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:33:24,590 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:33:25,667 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:33:25,679 - INFO - google_llm.py:161 - Response received from the model.
-2025-09-18 12:33:25,681 - WARNING - types.py:5522 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
-2025-09-18 12:33:27,978 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:33:27,979 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:33:29,052 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:33:29,056 - INFO - google_llm.py:161 - Response received from the model.
-INFO:     127.0.0.1:56400 - "GET /apps/cv_parser_agent/users/user/sessions/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55939 - "GET /debug/trace/session/c0c527ad-a394-450c-bb8f-30b148ce2a85 HTTP/1.1" 200 OK
+2025-09-22 22:34:11,645 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-09-22 22:34:11,646 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
+2025-09-22 22:34:16,433 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-22 22:34:16,437 - INFO - google_llm.py:161 - Response received from the model.
+INFO:     127.0.0.1:61866 - "GET /apps/cv_parser_agent/users/user/sessions/650a4a10-ac1b-435c-9152-521b14a7391c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50362 - "GET /debug/trace/session/650a4a10-ac1b-435c-9152-521b14a7391c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53857 - "POST /run_sse HTTP/1.1" 200 OK
+2025-09-22 22:34:27,065 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
+2025-09-22 22:34:28,960 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-09-22 22:34:28,961 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
+2025-09-22 22:34:32,402 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-22 22:34:32,405 - INFO - google_llm.py:161 - Response received from the model.
+INFO:     127.0.0.1:53857 - "GET /apps/cv_parser_agent/users/user/sessions/650a4a10-ac1b-435c-9152-521b14a7391c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59571 - "GET /debug/trace/session/650a4a10-ac1b-435c-9152-521b14a7391c HTTP/1.1" 200 OK
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 
@@ -354,16 +454,16 @@ INFO:     Waiting for application shutdown.
 +-----------------------------------------------------------------------------+
 
 INFO:     Application shutdown complete.
-INFO:     Finished server process [8280]
+INFO:     Finished server process [864]
 
 Aborted!
 
-(.venv) C:\Users\yamin\parent_folder>adk web
-C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\fast_api.py:175: UserWarning: [EXPERIMENTAL] InMemoryCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+C:\Users\yamin\parent_folder>adk web
+C:\Users\yamin\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\adk\cli\fast_api.py:175: UserWarning: [EXPERIMENTAL] InMemoryCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
   credential_service = InMemoryCredentialService()
-C:\Users\yamin\.venv\Lib\site-packages\google\adk\auth\credential_service\in_memory_credential_service.py:33: UserWarning: [EXPERIMENTAL] BaseCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+C:\Users\yamin\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\adk\auth\credential_service\in_memory_credential_service.py:33: UserWarning: [EXPERIMENTAL] BaseCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
   super().__init__()
-INFO:     Started server process [28748]
+INFO:     Started server process [13684]
 INFO:     Waiting for application startup.
 
 +-----------------------------------------------------------------------------+
@@ -374,56 +474,51 @@ INFO:     Waiting for application startup.
 
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO:     127.0.0.1:53157 - "GET / HTTP/1.1" 307 Temporary Redirect
-INFO:     127.0.0.1:53157 - "GET /list-apps?relative_path=./ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53157 - "POST /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53157 - "GET /apps/cv_parser_agent/eval_sets HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54090 - "GET /apps/cv_parser_agent/eval_results HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54090 - "GET /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54090 - "GET /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54880 - "POST /run_sse HTTP/1.1" 200 OK
-2025-09-18 12:34:17,173 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:34:17,174 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:34:17,446 - INFO - agent_loader.py:126 - Found root_agent in cv_parser_agent.agent
-C:\Users\yamin\.venv\Lib\site-packages\google\adk\cli\adk_web_server.py:330: UserWarning: [EXPERIMENTAL] App: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
+INFO:     127.0.0.1:59854 - "GET / HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:59854 - "GET /dev-ui/ HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:59854 - "GET /dev-ui/chunk-EQDQRRRY.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50978 - "GET /dev-ui/polyfills-B6TNHZQ6.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:53546 - "GET /dev-ui/main-W7QZBYAR.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:53546 - "GET /dev-ui/styles-4VDSPQ37.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:53546 - "GET /dev-ui/assets/config/runtime-config.json HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:53546 - "GET /dev-ui/assets/ADK-512-color.svg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:53546 - "GET /list-apps?relative_path=./ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53546 - "POST /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53546 - "GET /apps/cv_parser_agent/eval_sets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50978 - "GET /apps/cv_parser_agent/eval_results HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50978 - "GET /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50978 - "GET /apps/cv_parser_agent/users/user/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58799 - "POST /run_sse HTTP/1.1" 200 OK
+2025-09-22 22:42:44,476 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
+2025-09-22 22:42:44,477 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
+2025-09-22 22:42:44,765 - INFO - agent_loader.py:126 - Found root_agent in cv_parser_agent.agent
+C:\Users\yamin\AppData\Local\Programs\Python\Python313\Lib\site-packages\google\adk\cli\adk_web_server.py:330: UserWarning: [EXPERIMENTAL] App: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time.
   agentic_app = App(
-2025-09-18 12:34:19,759 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:34:19,760 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:34:20,652 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:34:20,656 - INFO - google_llm.py:161 - Response received from the model.
-2025-09-18 12:34:20,657 - WARNING - types.py:5522 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
-2025-09-18 12:34:22,997 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:34:22,998 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:34:24,318 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:34:24,322 - INFO - google_llm.py:161 - Response received from the model.
-INFO:     127.0.0.1:54880 - "GET /apps/cv_parser_agent/users/user/sessions/41237b9a-e147-4fed-a37a-09be80fb1a91 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50059 - "GET /debug/trace/session/41237b9a-e147-4fed-a37a-09be80fb1a91 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:61349 - "POST /run_sse HTTP/1.1" 200 OK
-2025-09-18 12:34:57,528 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:34:59,636 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:34:59,637 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:35:02,023 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:35:02,026 - INFO - google_llm.py:161 - Response received from the model.
-2025-09-18 12:35:02,027 - WARNING - types.py:5522 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
-2025-09-18 12:35:04,405 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:35:04,405 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:35:05,810 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:35:05,814 - INFO - google_llm.py:161 - Response received from the model.
-INFO:     127.0.0.1:61349 - "GET /apps/cv_parser_agent/users/user/sessions/41237b9a-e147-4fed-a37a-09be80fb1a91 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54407 - "GET /debug/trace/session/41237b9a-e147-4fed-a37a-09be80fb1a91 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50029 - "POST /run_sse HTTP/1.1" 200 OK
-2025-09-18 12:36:06,387 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
-2025-09-18 12:36:08,687 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:36:08,688 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:36:09,728 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:36:09,733 - INFO - google_llm.py:161 - Response received from the model.
-2025-09-18 12:36:09,735 - WARNING - types.py:5522 - Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
-2025-09-18 12:36:12,321 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
-2025-09-18 12:36:12,322 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
-2025-09-18 12:36:13,599 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-09-18 12:36:13,603 - INFO - google_llm.py:161 - Response received from the model.
-INFO:     127.0.0.1:50029 - "GET /apps/cv_parser_agent/users/user/sessions/41237b9a-e147-4fed-a37a-09be80fb1a91 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58251 - "GET /debug/trace/session/41237b9a-e147-4fed-a37a-09be80fb1a91 HTTP/1.1" 200 OK
+2025-09-22 22:42:46,944 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-09-22 22:42:46,945 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
+2025-09-22 22:42:51,251 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-22 22:42:51,257 - INFO - google_llm.py:161 - Response received from the model.
+INFO:     127.0.0.1:58799 - "GET /apps/cv_parser_agent/users/user/sessions/d274454e-d741-4d8c-a6ca-6b15b72ecdfd HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57846 - "GET /debug/trace/session/d274454e-d741-4d8c-a6ca-6b15b72ecdfd HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58865 - "POST /run_sse HTTP/1.1" 200 OK
+2025-09-22 22:43:13,690 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
+2025-09-22 22:43:15,572 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-09-22 22:43:15,573 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
+2025-09-22 22:43:20,021 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-22 22:43:20,025 - INFO - google_llm.py:161 - Response received from the model.
+INFO:     127.0.0.1:58865 - "GET /apps/cv_parser_agent/users/user/sessions/d274454e-d741-4d8c-a6ca-6b15b72ecdfd HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61935 - "GET /debug/trace/session/d274454e-d741-4d8c-a6ca-6b15b72ecdfd HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61199 - "POST /run_sse HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61199 - "GET /apps/cv_parser_agent/users/user/sessions/650a4a10-ac1b-435c-9152-521b14a7391c HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:49398 - "GET /debug/trace/session/650a4a10-ac1b-435c-9152-521b14a7391c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62754 - "POST /run_sse HTTP/1.1" 200 OK
+2025-09-22 22:47:21,402 - INFO - envs.py:47 - Loaded .env file for cv_parser_agent at C:\Users\yamin\parent_folder\cv_parser_agent\.env
+2025-09-22 22:47:23,376 - INFO - google_llm.py:113 - Sending out request, model: gemini-2.0-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2025-09-22 22:47:23,377 - INFO - models.py:8283 - AFC is enabled with max remote calls: 10.
+2025-09-22 22:47:27,108 - INFO - _client.py:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-09-22 22:47:27,112 - INFO - google_llm.py:161 - Response received from the model.
+INFO:     127.0.0.1:62754 - "GET /apps/cv_parser_agent/users/user/sessions/d274454e-d741-4d8c-a6ca-6b15b72ecdfd HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61254 - "GET /debug/trace/session/d274454e-d741-4d8c-a6ca-6b15b72ecdfd HTTP/1.1" 200 OK
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 
@@ -432,8 +527,8 @@ INFO:     Waiting for application shutdown.
 +-----------------------------------------------------------------------------+
 
 INFO:     Application shutdown complete.
-INFO:     Finished server process [28748]
+INFO:     Finished server process [13684]
 
 Aborted!
 
-(.venv) C:\Users\yamin\parent_folder>C:\Users\yamin\parent_folder\cv_parser_agent
+C:\Users\yamin\parent_folder>
